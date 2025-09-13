@@ -7,10 +7,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 /**
- * @title AgriTrust
+ * @title TraceChain
  * @dev NFT contract for agricultural supply chain tracking with quality and fairness verification
  */
-contract AgriTrust is ERC721, ERC721URIStorage, Ownable {
+contract TraceChain is ERC721, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     
     Counters.Counter private _tokenIdCounter;
@@ -79,7 +79,7 @@ contract AgriTrust is ERC721, ERC721URIStorage, Ownable {
         _;
     }
     
-    constructor() ERC721("AgriTrust", "AGRI") {}
+    constructor() ERC721("TraceChain", "TRACE") {}
     
     /**
      * @dev Register a new producer

@@ -207,7 +207,7 @@ export const MarketPlace: React.FC = () => {
           className="text-center mb-8"
         >
           <h1 className="text-3xl font-bold text-neutral-900 mb-4">
-            AgriTrust Marketplace
+            TraceChain Marketplace
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             Discover premium agricultural products with verified quality and fairness scores

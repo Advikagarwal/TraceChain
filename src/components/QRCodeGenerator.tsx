@@ -48,7 +48,7 @@ export const QRCodeGenerator: React.FC<QRCodeGeneratorProps> = ({
     if (!canvas) return;
 
     const link = document.createElement('a');
-    link.download = `agritrust-qr-${batchId}.png`;
+    link.download = `tracechain-qr-${batchId}.png`;
     link.href = canvas.toDataURL();
     link.click();
 

@@ -1,4 +1,4 @@
-export const APP_NAME = 'AgriTrust';
+export const APP_NAME = 'TraceChain';
 export const APP_DESCRIPTION = 'Decentralized Agricultural Supply Chain Platform';
 
 export const SUPPLY_CHAIN_STAGES = [

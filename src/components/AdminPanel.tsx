@@ -120,7 +120,7 @@ export const AdminPanel: React.FC = () => {
         >
           <h1 className="text-3xl font-bold text-neutral-900">Admin Panel</h1>
           <p className="text-neutral-600 mt-2">
-            Manage the AgriTrust platform and oversee system operations
+            Manage the TraceChain platform and oversee system operations
           </p>
         </motion.div>
 

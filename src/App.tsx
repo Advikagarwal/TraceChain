@@ -19,6 +19,7 @@ import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SupplyChainMap } from './components/SupplyChainMap';
 import { SmartContractInterface } from './components/SmartContractInterface';
 import { CertificationManager } from './components/CertificationManager';
+import { ProductCatalog } from './components/ProductCatalog';
 import { useAuth } from './hooks/useAuth';
 
 const queryClient = new QueryClient({
@@ -46,7 +47,7 @@ function AppContent() {
       case 'register':
         return <ProducerRegistration />;
       case 'marketplace':
-        return <MarketPlace />;
+        return <ProductCatalog />;
       case 'profile':
         return <ProducerProfile />;
       case 'create-batch':

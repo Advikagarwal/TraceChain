@@ -134,7 +134,7 @@ export const ProducerRegistration: React.FC = () => {
             Producer Registration
           </h1>
           <p className="text-lg text-neutral-600">
-            Join the AgriTrust network and showcase your commitment to quality and fairness
+            Join the TraceChain network and showcase your commitment to quality and fairness
           </p>
         </motion.div>
 

@@ -67,7 +67,7 @@ export const AdvancedAnalytics: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'agritrust-analytics.json';
+    a.download = 'tracechain-analytics.json';
     a.click();
     URL.revokeObjectURL(url);
   };

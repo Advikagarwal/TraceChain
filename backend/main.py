@@ -21,7 +21,7 @@ async def lifespan(app: FastAPI):
     await close_mongo_connection()
 
 app = FastAPI(
-    title="AgriTrust API",
+    title="TraceChain API",
     description="Decentralized Agricultural Supply Chain Platform",
     version="1.0.0",
     lifespan=lifespan
@@ -50,11 +50,11 @@ app.include_router(qr.router, prefix="/api/v1/qr", tags=["qr-codes"])
 
 @app.get("/")
 async def root():
-    return {"message": "AgriTrust API - Decentralized Agricultural Supply Chain Platform"}
+    return {"message": "TraceChain API - Decentralized Agricultural Supply Chain Platform"}
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy", "message": "AgriTrust API is running"}
+    return {"status": "healthy", "message": "TraceChain API is running"}
 
 if __name__ == "__main__":
     uvicorn.run(

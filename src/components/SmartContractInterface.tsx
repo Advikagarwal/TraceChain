@@ -79,7 +79,7 @@ export const SmartContractInterface: React.FC<SmartContractInterfaceProps> = ({
             Smart Contract Interface
           </h2>
           <p className="text-neutral-600">
-            Interact with the AgriTrust blockchain contract
+            Interact with the TraceChain blockchain contract
           </p>
         </div>
 

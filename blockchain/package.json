@@ -1,7 +1,7 @@
 {
-  "name": "agritrust-contracts",
+  "name": "tracechain-contracts",
   "version": "1.0.0",
-  "description": "Smart contracts for AgriTrust agricultural supply chain platform",
+  "description": "Smart contracts for TraceChain agricultural supply chain platform",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",

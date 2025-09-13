@@ -1,25 +1,25 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  console.log("Deploying AgriTrust contract...");
+  console.log("Deploying TraceChain contract...");
 
   // Get the contract factory
-  const AgriTrust = await ethers.getContractFactory("AgriTrust");
+  const TraceChain = await ethers.getContractFactory("TraceChain");
 
   // Deploy the contract
-  const agriTrust = await AgriTrust.deploy();
-  await agriTrust.waitForDeployment();
+  const traceChain = await TraceChain.deploy();
+  await traceChain.waitForDeployment();
 
-  const contractAddress = await agriTrust.getAddress();
-  console.log("AgriTrust deployed to:", contractAddress);
+  const contractAddress = await traceChain.getAddress();
+  console.log("TraceChain deployed to:", contractAddress);
 
   // Verify deployment
   console.log("Verifying deployment...");
-  const owner = await agriTrust.owner();
+  const owner = await traceChain.owner();
   console.log("Contract owner:", owner);
 
-  const name = await agriTrust.name();
-  const symbol = await agriTrust.symbol();
+  const name = await traceChain.name();
+  const symbol = await traceChain.symbol();
   console.log("Token name:", name);
   console.log("Token symbol:", symbol);
 
@@ -29,7 +29,7 @@ async function main() {
     network: network.name,
     deployer: owner,
     deploymentTime: new Date().toISOString(),
-    contractName: "AgriTrust",
+    contractName: "TraceChain",
     tokenName: name,
     tokenSymbol: symbol,
   };

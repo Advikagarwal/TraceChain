@@ -50,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({
                             rounded-lg flex items-center justify-center">
               <Leaf className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-neutral-900">AgriTrust</span>
+            <span className="text-xl font-bold text-neutral-900">TraceChain</span>
           </motion.div>
 
           {/* Desktop Navigation */}

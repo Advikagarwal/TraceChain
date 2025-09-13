@@ -1,10 +1,10 @@
-# AgriTrust: Decentralized Agricultural Supply Chain Platform
+# TraceChain: Decentralized Agricultural Supply Chain Platform
 
 A comprehensive blockchain-based platform that revolutionizes agricultural supply chains through transparency, AI-powered quality assessment, and ethical farming verification.
 
 ## 🌱 Overview
 
-AgriTrust combines cutting-edge blockchain technology with artificial intelligence to create a transparent, fair, and sustainable agricultural ecosystem. From farm to table, every step is verified and recorded on an immutable ledger.
+TraceChain combines cutting-edge blockchain technology with artificial intelligence to create a transparent, fair, and sustainable agricultural ecosystem. From farm to table, every step is verified and recorded on an immutable ledger.
 
 ## ✨ Key Features
 
@@ -53,7 +53,7 @@ AgriTrust combines cutting-edge blockchain technology with artificial intelligen
 1. **Clone and setup the project**:
 ```bash
 git clone <repository-url>
-cd agritrust-platform
+cd tracechain-platform
 npm install
 ```
 
@@ -138,7 +138,7 @@ VITE_NETWORK_ID=1337
 **Backend (.env)**:
 ```env
 MONGODB_URL=mongodb://localhost:27017
-DATABASE_NAME=agritrust
+DATABASE_NAME=tracechain
 RPC_URL=http://localhost:8545
 CONTRACT_ADDRESS=0x...
 PRIVATE_KEY=0x...
@@ -214,8 +214,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email support@agritrust.com or join our Discord community.
+For support, email support@tracechain.com or join our Discord community.
 
 ---
 
-**AgriTrust** - Building a transparent, fair, and sustainable food system through blockchain technology.
+**TraceChain** - Building a transparent, fair, and sustainable food system through blockchain technology.
