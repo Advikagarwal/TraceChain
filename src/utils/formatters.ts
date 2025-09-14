@@ -44,6 +44,11 @@ export const truncateAddress = (address: string, chars: number = 6): string => {
   return `${address.slice(0, chars)}...${address.slice(-chars)}`;
 };
 
+export const formatAddress = (address: string, chars: number = 6): string => {
+  if (!address) return '';
+  return `${address.slice(0, chars)}...${address.slice(-chars)}`;
+};
+
 export const formatWeight = (weight: number, unit: string = 'kg'): string => {
   if (weight >= 1000) {
     return `${(weight / 1000).toFixed(1)} t`;
