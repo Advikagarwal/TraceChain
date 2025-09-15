@@ -29,7 +29,7 @@ class BlockchainService:
             contract_address = os.getenv("CONTRACT_ADDRESS")
             if contract_address:
                 # Load ABI from compiled contract
-                abi_path = "../blockchain/artifacts/contracts/AgriTrust.sol/AgriTrust.json"
+                abi_path = "../blockchain/artifacts/contracts/TraceChain.sol/TraceChain.json"
                 if os.path.exists(abi_path):
                     with open(abi_path, 'r') as f:
                         contract_json = json.load(f)
@@ -68,7 +68,7 @@ class BlockchainService:
             location = batch_data["location"]
             
             # Create metadata URI (would typically be IPFS)
-            token_uri = f"https://api.agritrust.com/metadata/{batch_id}"
+            token_uri = f"https://api.tracechain.com/metadata/{batch_id}"
             
             # Build transaction
             function = self.contract.functions.mintBatch(
@@ -165,7 +165,7 @@ class BlockchainService:
             
         except Exception as e:
             logger.error(f"Failed to get token info: {e}")
-            raise HTTPException(status_code=500, detail=str(e))
+            raise Exception(str(e))
     
     async def verify_transaction(self, tx_hash: str) -> Dict[str, Any]:
         """Verify a blockchain transaction"""

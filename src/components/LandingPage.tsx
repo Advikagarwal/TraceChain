@@ -208,7 +208,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
-              How AgriTrust Works
+              How TraceChain Works
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
               A simple, three-step process that transforms agricultural supply chains

@@ -17,7 +17,7 @@ async def websocket_endpoint(websocket: WebSocket, user_id: str):
         # Send welcome message
         await websocket.send_text(json.dumps({
             "type": "connection",
-            "message": "Connected to AgriTrust real-time updates",
+            "message": "Connected to TraceChain real-time updates",
             "connection_id": connection_id
         }))
         

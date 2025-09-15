@@ -8,7 +8,9 @@ import {
   Leaf,
   ExternalLink,
   Share2,
-  Download
+  Download,
+  Camera,
+  AlertCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { QualityAssessment } from './QualityAssessment';

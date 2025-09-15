@@ -2,6 +2,7 @@ import React from 'react';
 import { Leaf, Menu, X, LogIn, User } from 'lucide-react';
 import { WalletConnect } from './WalletConnect';
 import { NotificationCenter } from './NotificationCenter';
+import { MobileMenu } from './MobileMenu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../hooks/useAuth';
 
@@ -122,41 +123,13 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-t border-neutral-200"
-          >
-            <div className="px-4 py-4 space-y-2">
-              {navigation.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    onViewChange(item.id);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                    currentView === item.id
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-              
-              <div className="pt-4 border-t border-neutral-200">
-                {user && <NotificationCenter />}
-                <WalletConnect />
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        currentView={currentView}
+        onViewChange={onViewChange}
+        user={user}
+      />
     </header>
   );
 };

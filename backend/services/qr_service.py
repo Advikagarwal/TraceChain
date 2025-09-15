@@ -10,7 +10,7 @@ class QRCodeService:
     """Service for generating QR codes for batch tracking"""
     
     def __init__(self):
-        self.base_url = "https://agritrust.com/track"  # In production, use actual domain
+        self.base_url = "https://tracechain.com/track"  # In production, use actual domain
     
     def generate_batch_qr(self, batch_id: str, format: str = "png") -> Dict[str, Any]:
         """Generate QR code for batch tracking"""

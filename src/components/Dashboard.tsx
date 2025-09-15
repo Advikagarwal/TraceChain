@@ -11,6 +11,9 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
+import { BatchTrackingWidget } from './BatchTrackingWidget';
+import { MarketInsights } from './MarketInsights';
+import { RealTimeUpdates } from './RealTimeUpdates';
 
 const mockData = {
   stats: {
@@ -102,7 +105,7 @@ const StatCard: React.FC<{
           )}
         </div>
         <div className={`w-12 h-12 ${color} rounded-lg flex items-center justify-center`}>
-          {icon}
+          <p className="text-neutral-600">Loading TraceChain...</p>
         </div>
       </div>
     </motion.div>
@@ -124,6 +127,14 @@ export const Dashboard: React.FC = () => {
             Monitor your agricultural supply chain performance and insights
           </p>
         </motion.div>
+
+        {/* Quick Actions and Insights */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <BatchTrackingWidget />
+          <div className="lg:col-span-2">
+            <MarketInsights />
+          </div>
+        </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -323,6 +334,9 @@ export const Dashboard: React.FC = () => {
             </table>
           </div>
         </motion.div>
+
+        {/* Real-time Updates */}
+        <RealTimeUpdates />
       </div>
     </div>
   );

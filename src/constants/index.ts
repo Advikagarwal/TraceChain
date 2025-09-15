@@ -91,11 +91,11 @@ export const NETWORK_CONFIG = {
 };
 
 export const CONTRACT_ADDRESSES = {
-  AGRITRUST: process.env.REACT_APP_CONTRACT_ADDRESS || '',
+  TRACECHAIN: import.meta.env.VITE_CONTRACT_ADDRESS || '',
 };
 
 export const API_ENDPOINTS = {
-  BASE_URL: process.env.REACT_APP_API_URL || 'http://localhost:8000/api/v1',
+  BASE_URL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1',
   PRODUCERS: '/producers',
   BATCHES: '/batches',
   QUALITY: '/quality',

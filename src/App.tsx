@@ -20,6 +20,7 @@ import { SupplyChainMap } from './components/SupplyChainMap';
 import { SmartContractInterface } from './components/SmartContractInterface';
 import { CertificationManager } from './components/CertificationManager';
 import { ProductCatalog } from './components/ProductCatalog';
+import { LoadingScreen } from './components/LoadingScreen';
 import { useAuth } from './hooks/useAuth';
 
 const queryClient = new QueryClient({
@@ -70,14 +71,7 @@ function AppContent() {
   };
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin w-8 h-8 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4" />
-          <p className="text-neutral-600">Loading AgriTrust...</p>
-        </div>
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   return (

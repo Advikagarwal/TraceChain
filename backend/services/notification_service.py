@@ -18,7 +18,8 @@ class NotificationService:
     ):
         """Create and send a notification to a user"""
         try:
-            db = await get_database()
+            from database.connection import db
+            database = db.database
             
             # Store notification in database
             notification_data = {
@@ -29,7 +30,7 @@ class NotificationService:
                 "read": False
             }
             
-            result = await db.notifications.insert_one(notification_data)
+            result = await database.notifications.insert_one(notification_data)
             
             # Send real-time notification
             await manager.send_personal_message({

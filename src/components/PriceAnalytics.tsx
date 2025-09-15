@@ -12,6 +12,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { useCurrentPrice, usePriceForecast } from '../hooks/useApi';
 import { formatCurrency, formatPercentage } from '../utils/formatters';
 import { PRODUCT_TYPES } from '../constants';
+import { CheckCircle } from 'lucide-react';
 
 const mockPriceData = [
   { date: '2024-01-01', price: 4.20, volume: 1200 },

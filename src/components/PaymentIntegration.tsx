@@ -41,7 +41,7 @@ export const PaymentIntegration: React.FC<PaymentIntegrationProps> = ({
       showToast({
         type: 'success',
         title: 'Payment Successful',
-        message: `Your purchase of ${productName} has been completed.`,
+        message: `Your purchase of ${productName} has been completed.`
       });
       
       onPaymentSuccess?.(paymentId);
@@ -49,7 +49,7 @@ export const PaymentIntegration: React.FC<PaymentIntegrationProps> = ({
       showToast({
         type: 'error',
         title: 'Payment Failed',
-        message: 'There was an issue processing your payment. Please try again.',
+        message: 'There was an issue processing your payment. Please try again.'
       });
     } finally {
       setIsProcessing(false);
